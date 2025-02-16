@@ -137,12 +137,13 @@ class Calendar extends Component {
     render() {
         return (
             <div className="calendar-container">
+                <CustomToolbar localizer={localizer} />
                 <MyCalendar
                     popup
                     selectable
                     localizer={localizer}
                     defaultView={MyCalendar.Views.MONTH}
-                    components={{ toolbar: CustomToolbar }}
+                    // components={{ toolbar: CustomToolbar }}
                     views={["month"]}
                     style={{ height: 600 }}
                     events={this.props.events}
