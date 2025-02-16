@@ -69,14 +69,14 @@ class CustomToolbar extends Component {
                     </button>
                 </span>
                 <span className="rbc-btn-group">
-                    {/* <button
+                    <button
                         type="button"
                         // className="btn btn-upcoming"
                         style={{ backgroundColor: "rgb(140, 189, 76)" }}
                         onClick={(e) => this.onClickUpcomingEvents()}
                     >
                         Upcoming
-                    </button> */}
+                    </button>
                 </span>
             </div>
         );
