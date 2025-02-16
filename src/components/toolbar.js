@@ -49,34 +49,35 @@ class CustomToolbar extends Component {
                     </button>
                 </span>
                 <span className="rbc-toolbar-label">{label}</span>
-                <span className="rbc-btn-group">
+                {/* <span className="rbc-btn-group"> */}
                     <button
                         type="button"
-                        // className="btn"
+                        className="btn"
                         onClick={(e) => this.onClickAllEvents()}
                     >
                         All
                     </button>
-                </span>
-                <span className="rbc-btn-group">
+                {/* </span> */}
+                {/* <span className="rbc-btn-group"> */}
                     <button
                         type="button"
-                        // className="btn"
+                        className="btn"
                         style={{ backgroundColor: "rgb(222, 105, 135)" }}
                         onClick={(e) => this.onClickPastEvents()}
                     >
                         Past
                     </button>
-                </span>
-                <span className="rbc-btn-group">
+                {/* </span> */}
+                {/* <span className="rbc-btn-group"> */}
                     <button
-                        // className="btn"
+                    type="button"
+                        className="btn"
                         style={{ backgroundColor: "rgb(140, 189, 76)" }}
                         onClick={(e) => this.onClickUpcomingEvents()}
                     >
                         Upcoming
                     </button>
-                </span>
+                {/* </span> */}
             </div>
         );
     }
