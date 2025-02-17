@@ -153,14 +153,7 @@ class Calendar extends Component {
                                     style={{
                                         backgroundColor: isPastEvent
                                             ? "#DE6987"
-                                            : "#8CBD4C", // Past: Red, Upcoming: Green
-                                        color: "white",
-                                        border: "none",
-                                        borderRadius: "5px",
-                                        padding: "5px 10px",
-                                        cursor: "pointer",
-                                        width: "100%",
-                                        textAlign: "center",
+                                            : "#8CBD4C",
                                     }}
                                 >
                                     {event.title}
