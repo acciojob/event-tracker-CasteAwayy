@@ -124,6 +124,7 @@ class Calendar extends Component {
         let current_time = moment().format("YYYY MM DD");
         let event_time = moment(event.start).format("YYYY MM DD");
         let background = current_time > event_time ? "#DE6987" : "#8CBD4C";
+        // return <button style={{ backgroundColor: background }}></button>;
         return {
             style: {
                 backgroundColor: background,
@@ -132,6 +133,7 @@ class Calendar extends Component {
     }
 
     render() {
+        const currentDate = moment();
         return (
             <div className="calendar-container">
                 <MyCalendar
@@ -141,22 +143,30 @@ class Calendar extends Component {
                     defaultView={MyCalendar.Views.MONTH}
                     components={{
                         toolbar: CustomToolbar,
-                        event: ({ event }) => (
-                            <button
-                                style={{
-                                    backgroundColor: "inherit",
-                                    color: "white",
-                                    border: "none",
-                                    borderRadius: "5px",
-                                    padding: "5px 10px",
-                                    cursor: "pointer",
-                                    width: "100%",
-                                    textAlign: "center",
-                                }}
-                            >
-                                {event.title}
-                            </button>
-                        ),
+                        event: ({ event }) => {
+                            const isPastEvent = moment(event.start).isBefore(
+                                currentDate
+                            );
+
+                            return (
+                                <button
+                                    style={{
+                                        backgroundColor: isPastEvent
+                                            ? "#DE6987"
+                                            : "#8CBD4C", // Past: Red, Upcoming: Green
+                                        color: "white",
+                                        border: "none",
+                                        borderRadius: "5px",
+                                        padding: "5px 10px",
+                                        cursor: "pointer",
+                                        width: "100%",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    {event.title}
+                                </button>
+                            );
+                        },
                     }}
                     views={["month"]}
                     style={{ height: 600 }}
