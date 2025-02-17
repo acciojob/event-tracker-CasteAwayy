@@ -6,7 +6,7 @@ class Input extends Component {
         super(props);
 
         this.state = {
-            value: ''
+            value: this.props.defaultValue
         };
 
         this.onChange = (e) => this.onInputChange(e);

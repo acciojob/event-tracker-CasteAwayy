@@ -4,12 +4,9 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import reduxThunk from "redux-thunk";
 
-import App from "./components/App";
+import App from "./components/app";
 import rootReducer from "./reducers";
-import "./styles/popup.css";
-import "./styles/style.css";
-import "./styles/react-big-calendar.css";
-``
+
 const store = createStore(rootReducer, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
