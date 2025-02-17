@@ -150,6 +150,7 @@ class Calendar extends Component {
 
                             return (
                                 <button
+                                    className="btn"
                                     style={{
                                         backgroundColor: isPastEvent
                                             ? "#DE6987"
