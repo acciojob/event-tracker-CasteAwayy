@@ -62,7 +62,7 @@ class CustomToolbar extends Component {
                     <button
                         type="button"
                         style={{ backgroundColor: "rgb(222, 105, 135)" }}
-                        // className="btn"
+                        className="btn"
                         onClick={(e) => this.onClickPastEvents()}
                     >
                         Past
