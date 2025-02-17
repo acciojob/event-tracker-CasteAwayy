@@ -61,7 +61,7 @@ class CustomToolbar extends Component {
                 <span className="rbc-btn-group">
                     <button
                         type="button"
-                        style={{ backgroundColor: 'rgb(222, 105, 135)' }}
+                        style={{ backgroundColor: "rgb(222, 105, 135)" }}
                         className="btn"
                         onClick={(e) => this.onClickPastEvents()}
                     >
@@ -69,14 +69,14 @@ class CustomToolbar extends Component {
                     </button>
                 </span>
                 <span className="rbc-btn-group">
-                    {/* <button
+                    <button
                         type="button"
-                        style={{ backgroundColor: 'rgb(140, 189, 76)' }}
-                        className="btn"
+                        style={{ backgroundColor: "rgb(140, 189, 76)" }}
+                        // className="btn"
                         onClick={(e) => this.onClickUpcomingEvents()}
                     >
                         Upcoming
-                    </button> */}
+                    </button>
                 </span>
             </div>
         );
