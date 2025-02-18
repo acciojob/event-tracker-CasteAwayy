@@ -1,8 +1,14 @@
+import {
+    FETCH_EVENTS,
+    CREATE_EVENT,
+    UPDATE_EVENT,
+    DELETE_EVENT,
+    PAST_EVENTS,
+    UPCOMING_EVENTS,
+} from "../actions";
 
-import { FETCH_EVENTS, CREATE_EVENT, UPDATE_EVENT, DELETE_EVENT, PAST_EVENTS, UPCOMING_EVENTS } from "../actions";
-
-export default function(state = [], action) {
-    switch(action.type) {
+export default function (state = [], action) {
+    switch (action.type) {
         case FETCH_EVENTS:
             return action.payload;
 
@@ -20,8 +26,8 @@ export default function(state = [], action) {
 
         case UPCOMING_EVENTS:
             return action.payload;
-            
-        default: 
+
+        default:
             return state;
     }
 }
