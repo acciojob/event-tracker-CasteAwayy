@@ -76,7 +76,9 @@ class Calendar extends Component {
         }
 
         let titleChange = function (value) {
-            slotInfo.title = "Upcoming Event " + value;
+            if (popupTitle === "Create Event") slotInfo.title = value;
+            if (popupTitle === "Update Event")
+                slotInfo.title = "Upcoming Event " + value;
         };
         let locationChange = function (value) {
             slotInfo.location = value;
